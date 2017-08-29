@@ -6,4 +6,9 @@
         'log' => [
             'driver' => 'cli',
         ],
+
+        'route' => [
+            'regex' => false ,
+        ]
+
     ];
