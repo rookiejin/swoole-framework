@@ -104,11 +104,11 @@
         },
         {
             "name": "rookiejin/swoole",
-            "version": "0.3.1",
+            "version": "0.3.3",
             "dist": {
                 "type": "path",
                 "url": "../swoole",
-                "reference": "f25ee7304ba4b70486c6b92fa7d429b5193b1d56",
+                "reference": "50eec8b566559563a8ef4f416401c81627b1c12b",
                 "shasum": null
             },
             "require": {
@@ -118,7 +118,10 @@
             "autoload": {
                 "psr-4": {
                     "Rookiejin\\Swoole\\": "src/"
-                }
+                },
+                "files": [
+                    "./src/Helper/helpers.php"
+                ]
             },
             "license": [
                 "MIT"
@@ -158,12 +161,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/eaglewu/swoole-ide-helper.git",
-                "reference": "a4bf4e464cb184fd71708578e3cba6609c93e711"
+                "reference": "2b452bff2219b6e963c8debca2d24ead6e330deb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/eaglewu/swoole-ide-helper/a4bf4e464cb184fd71708578e3cba6609c93e711.zip",
-                "reference": "a4bf4e464cb184fd71708578e3cba6609c93e711",
+                "url": "https://files.phpcomposer.com/files/eaglewu/swoole-ide-helper/2b452bff2219b6e963c8debca2d24ead6e330deb.zip",
+                "reference": "2b452bff2219b6e963c8debca2d24ead6e330deb",
                 "shasum": ""
             },
             "type": "library",
@@ -175,12 +178,12 @@
             "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
-                    "name": "eaglewu",
-                    "email": "eaglewu@gmail.com"
+                    "name": "eagle",
+                    "email": "eaglewudi@gmail.com"
                 }
             ],
             "description": "Swoole 在IDE下自动识别类、函数、宏，自动补全函数名",
-            "time": "2017-08-14T04:00:11+00:00"
+            "time": "2017-08-24T01:36:10+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -243,20 +246,20 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v3.3.6",
+            "version": "v3.3.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "b2623bccb969ad595c2090f9be498b74670d0663"
+                "reference": "89fcb5a73e0ede2be2512234c4e40457bb22b35f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/b2623bccb969ad595c2090f9be498b74670d0663.zip",
-                "reference": "b2623bccb969ad595c2090f9be498b74670d0663",
+                "url": "https://files.phpcomposer.com/files/symfony/var-dumper/89fcb5a73e0ede2be2512234c4e40457bb22b35f.zip",
+                "reference": "89fcb5a73e0ede2be2512234c4e40457bb22b35f",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": "^5.5.9|>=7.0.8",
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
@@ -307,7 +310,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2017-07-28T06:06:09+00:00"
+            "time": "2017-08-27T14:52:21+00:00"
         }
     ],
     "aliases": [],

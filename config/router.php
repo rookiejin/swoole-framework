@@ -28,8 +28,8 @@
             'delete',
             'Home@delete',
         ],
-        'home/regex/:id' => [
-            'get',
-            'Home@regex'
-        ]
+        'home/file' => [
+            'post',
+            'Home@file',
+        ],
     ];

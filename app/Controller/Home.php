@@ -9,17 +9,14 @@
 namespace App\Controller;
 
 
+use Rookiejin\Swoole\Container\Context;
+
 class Home
 {
+
     protected $i = 1 ;
 
     protected $b = 3333333333;
-
-    public function bootstrap()
-    {
-        $this->i = 1 ;
-        $this->b = 3333333333 ;
-    }
 
     public function index()
     {
@@ -31,38 +28,150 @@ class Home
 
     public function put()
     {
-        return 'put';
+        /**
+         * @var Context
+         */
+
+        $context = context() ;
+
+        $demo = [];
+
+        $demo ['server'] = $context->getRequest()->getServer();
+
+        $demo ['get'] = $context->getRequest()->getGet();
+
+        $demo ['post'] = $context->getRequest()->getPost();
+
+        $demo ['file'] = $context->getRequest()->getFiles();
+
+        $context->getResponse()->addHeader(['Content-Type' => 'application/json']);
+
+        $demo ['response-header'] = $context->getResponse()->getHeader();
+
+        return json_encode($demo);
     }
 
     public function post()
     {
-        return 'post';
+        /**
+         * @var Context
+         */
+
+        $context = context() ;
+
+        $demo = [];
+
+        $demo ['server'] = $context->getRequest()->getServer();
+
+        $demo ['get'] = $context->getRequest()->getGet();
+
+        $demo ['post'] = $context->getRequest()->getPost();
+
+        $demo ['file'] = $context->getRequest()->getFiles();
+
+        $context->getResponse()->addHeader(['Content-Type' => 'application/json']);
+
+        $demo ['response-header'] = $context->getResponse()->getHeader();
+
+        return json_encode($demo);
     }
 
     public function file()
     {
-        return 'file';
+        /**
+         * @var Context
+         */
+
+        $context = context() ;
+
+        $demo = [];
+
+        $demo ['file'] = $context->getRequest()->getFiles();
+
+        return json_encode($demo);
     }
 
     public function get()
     {
-        return 'get';
+        /**
+         * @var Context
+         */
+
+        $context = context() ;
+
+
+        $demo = [];
+
+        $demo ['server'] = $context->getRequest()->getServer();
+
+        $demo ['get'] = $context->getRequest()->getGet();
+
+        $demo ['post'] = $context->getRequest()->getPost();
+
+        $demo ['file'] = $context->getRequest()->getFiles();
+
+        $demo ['cookies'] = $context->getRequest()->getCookies();
+
+        $context->getResponse()->addHeader(['Content-Type' => 'application/json']);
+
+        $context->getResponse()->addCookie('key','value',0,'','',true,true);
+
+        $demo ['response-header'] = $context->getResponse()->getHeader();
+
+        return json_encode($demo);
+
     }
 
     public function delete()
     {
-        return 'delete';
+        /**
+         * @var Context
+         */
+
+        $context = context() ;
+
+
+        $demo = [];
+
+        $demo ['server'] = $context->getRequest()->getServer();
+
+        $demo ['get'] = $context->getRequest()->getGet();
+
+        $demo ['post'] = $context->getRequest()->getPost();
+
+        $demo ['file'] = $context->getRequest()->getFiles();
+
+        $context->getResponse()->addHeader(['Content-Type' => 'application/json']);
+
+        $demo ['response-header'] = $context->getResponse()->getHeader();
+
+        return json_encode($demo);
     }
 
     public function regex()
     {
-        return 'delete';
+        /**
+         * @var Context
+         */
+
+        $context = context() ;
+
+
+        $demo = [];
+
+        $demo ['server'] = $context->getRequest()->getServer();
+
+        $demo ['get'] = $context->getRequest()->getGet();
+
+        $demo ['post'] = $context->getRequest()->getPost();
+
+        $demo ['file'] = $context->getRequest()->getFiles();
+
+        $context->getResponse()->addHeader(['Content-Type' => 'application/json']);
+
+        $demo ['response-header'] = $context->getResponse()->getHeader();
+
+        return json_encode($demo);
     }
-
-    public function endResponse()
-    {
-
-    }
-
 
 }
